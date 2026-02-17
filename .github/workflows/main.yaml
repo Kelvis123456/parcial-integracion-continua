@@ -22,6 +22,7 @@ jobs:
         run: npm install -g surge
 
       - name: Deploy a Surge
-        run: surge ./ --domain kelvis-itla-2026.surge.sh
+        run: surge ./ kelvis-itla-2026.surge.sh --token $SURGE_TOKEN
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+
